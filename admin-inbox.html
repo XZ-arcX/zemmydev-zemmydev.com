@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="card">
+<h2>ADMIN INBOX</h2>
+<ul id="msgs"></ul>
+</div>
+<script>
+fetch('/messages').then(r=>r.json()).then(data=>{
+const ul=document.getElementById('msgs');
+data.forEach(m=>{
+const li=document.createElement('li');
+li.innerHTML=`<b>${m.sender}</b>: ${m.content}`;
+ul.appendChild(li);
+});
+});
+</script>
+<script src="/chaos.js"></script>
+</body>
+</html>

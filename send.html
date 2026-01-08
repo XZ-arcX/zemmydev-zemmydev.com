@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/style.css">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+<div class="card">
+<h2>Send a Message to the Void 🕳️</h2>
+<form method="POST" action="/send">
+<input name="sender" placeholder="Your name or email" required>
+<textarea name="content" placeholder="Speak..." required></textarea>
+<div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+<button>SEND</button>
+</form>
+</div>
+<script src="/chaos.js"></script>
+</body>
+</html>
